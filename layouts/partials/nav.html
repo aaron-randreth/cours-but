@@ -1,0 +1,27 @@
+<header class="nav-header">
+    <img class="logo" src="/favicon.svg" style="max-height:1.5em;" alt="website
+    logo"/>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+<nav class="nav-top">
+    <menu>
+
+    <li><a href="{{ .Site.BaseURL }}" class="{{ if .IsHome }}active {{ end }}">Acceuil</a>
+    </li>
+
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }} 
+    <li><a class=" 
+        {{if or ($currentPage.IsMenuCurrent "main" .)
+        ($currentPage.HasMenuCurrent "main" .) }}active{{end}}"
+    href="{{ .URL }}" title="{{ .Title }}">
+        {{ .Name }}
+        </a></li>
+    {{ end }} 
+
+    </menu>
+</nav>
+<label for="nav-toggle" class="nav-toggle-label">
+    <span>
+    </span>
+    </label>
+</header>

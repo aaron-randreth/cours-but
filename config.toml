@@ -1,0 +1,11 @@
+baseURL = 'http://example.org/'
+languageCode = 'fr'
+title = 'Cours'
+theme = 'lugo'
+SectionPagesMenu = 'main'
+
+
+[params]
+    favicon = 'favicon.svg'
+    css = ["style.css", "nav.css", "footer.css"]
+

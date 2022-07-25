@@ -1,0 +1,30 @@
+{{ partial "header.html" . -}}
+<header><h1>{{ .Title }}</h1></header>
+<details class="article-info">
+    <summary>Article information</summary>
+    <section>
+    {{ partial "taglist.html" . -}}
+    {{ if .Params.tags }}
+    <hr>
+    {{ end }}
+
+    {{ $has_toc := ge ( .TableOfContents | strings.Count "<li>" ) 1 }}
+
+    {{ if $has_toc }}
+    <h1>Table of content</h1>
+    {{ .TableOfContents }}
+    {{ end }}
+
+    {{ with .Params.author }}
+    <p>By {{ . }}</p>
+    {{ end }}
+
+    {{ if or $has_toc .Params.author }}
+    <hr>
+    {{ end }}
+    <p>{{ .FuzzyWordCount }} mots pour {{ .ReadingTime }} minutes de lecture.</p>
+    </section>
+</details>
+<article>
+{{ .Content -}}
+{{ partial "footer.html" . }}

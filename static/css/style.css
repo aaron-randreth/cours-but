@@ -1,0 +1,131 @@
+:root{
+	--primary-color:white;
+	--secondary-color:#131313;
+	--tertiary-color:#181818;
+	--highlight-color: #D494FF; /*#5a002c;*/
+	--border-color: #2b2b2b;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+	font-style: sans-serif ;
+	background: var(--secondary-color);
+	color: var(--primary-color);
+}
+
+main {
+	max-width: 800px ;
+	margin: auto ;
+}
+
+img {
+	max-width: 100% ;
+}
+
+header h1 {
+	text-align: center ;
+}
+
+footer {
+	text-align: center ;
+	clear: both ;
+}
+
+a:hover {
+    color: var(--highlight-color);
+}
+
+/* For TAGLIST.HTML */
+
+.article-info {
+    margin: 1em;
+}
+
+.taglist {
+	text-align: left ;
+	clear: both ;
+}
+
+.taglist::before {
+    content: "Tags: ";
+}
+
+/* For NEXTPREV.HTML */
+#nextprev {
+	/* The container for both the previous and next articles. */
+    
+}
+
+#prevart {
+	float: left;
+	text-align: left;
+}
+#nextart {
+	float: right ;
+	text-align: right ;
+}
+#nextart,#prevart {
+	max-width: 33% ;
+}
+
+#top-arrow {
+    position: fixed;
+    bottom: 1rem;
+    right: 1.5rem;
+    color: var(--primary-color);
+    font-size: 1.6rem;
+
+    text-decoration: none;
+    border: 0.2rem solid var(--primary-color);
+    border-radius: 100%;
+}
+
+#top-arrow:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-color: var(--primary-color);
+}
+
+.home {
+    color: var(--highlight-color);
+    text-decoration: none;
+}
+
+.home::before {
+    display:inline-block;
+    content: "⌂";
+    font-size: 1.5rem;
+}
+
+article {
+    background-color: var(--tertiary-color);
+    margin: 0.5rem;
+    padding: 1rem; 
+
+    border: 5px solid var(--border-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+h1 {
+    /*color: var(--highlight-color);*/
+    text-decoration: underline;
+}
+
+.article-info summary{
+}
+
+.article-info section{
+    padding: 1em;
+    position: absolute;
+    max-width: min(70%, 40em);
+
+    border: 5px solid var(--border-color);
+    border-radius: 5px;
+
+    background-color: var(--tertiary-color);
+}

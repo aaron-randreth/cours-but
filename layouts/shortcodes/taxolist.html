@@ -1,0 +1,23 @@
+{{/*
+
+    title
+    type: 
+        - tags
+        - categories
+
+*/}}
+
+<section>
+  {{with .Get "title" }}
+  <h2>{{.}}</h2>
+  {{end}}
+  <ul>
+      {{ $base := (.Get "type") | relLangURL }}
+      {{ range $name, $taxonomy := (index $.Site.Taxonomies (.Get "type")) }}
+      <li>
+        <a href="{{ $base }}/{{ $name | urlize }}/">{{ $taxonomy.Page.Title }}</a>
+        ({{ $taxonomy.Count }})
+      </li>
+    {{ end }}
+  </ul>
+</section>

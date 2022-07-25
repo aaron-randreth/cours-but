@@ -1,0 +1,17 @@
+{{/*
+
+    title
+
+*/}}
+
+<section>
+  {{with .Get "title" }}
+  <h2>{{.}}</h2>
+  {{end}}
+
+  <ul>
+      {{ range .Site.Menus.main}}
+      <li><a href="{{ .URL }}" title="{{ .Title }}" >{{ .Name }}</a></li>
+      {{end}}
+  </ul>
+</section>
