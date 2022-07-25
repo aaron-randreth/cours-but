@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cours</title><link>http://example.org/tags/r3.09-cryptographie-sem/</link><description>Recent content in R3.09 Cryptographie (SeM) on Cours</description><generator>Hugo -- gohugo.io</generator><language>fr</language><lastBuildDate>Sat, 23 Jul 2022 14:45:05 +0200</lastBuildDate><atom:link href="http://example.org/tags/r3.09-cryptographie-sem/index.xml" rel="self" type="application/rss+xml"/><item><title>Article</title><link>http://example.org/cours/article/</link><pubDate>Sat, 23 Jul 2022 14:45:05 +0200</pubDate><guid>http://example.org/cours/article/</guid><description>&lt;!-- raw HTML omitted -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cours</title><link>https://aaron-randreth.github.io/tags/r3.09-cryptographie-sem/</link><description>Recent content in R3.09 Cryptographie (SeM) on Cours</description><generator>Hugo -- gohugo.io</generator><language>fr</language><lastBuildDate>Sat, 23 Jul 2022 14:45:05 +0200</lastBuildDate><atom:link href="https://aaron-randreth.github.io/tags/r3.09-cryptographie-sem/index.xml" rel="self" type="application/rss+xml"/><item><title>Article</title><link>https://aaron-randreth.github.io/cours/article/</link><pubDate>Sat, 23 Jul 2022 14:45:05 +0200</pubDate><guid>https://aaron-randreth.github.io/cours/article/</guid><description>&lt;!-- raw HTML omitted -->
 &lt;h2 id="hello-">Hello !&lt;/h2>
 &lt;h3 id="subheading">subheading&lt;/h3>
 &lt;p>This is a test text!
@@ -20,7 +20,7 @@ meaningful content. Lorem ipsum may be used as a placeholder before final copy
 is available. It is also used to temporarily replace text in a process called
 greeking, which allows designers to consider the form of a webpage or
 publication, without the meaning of the text influencing the design.&lt;/p>
-&lt;h3 id="part-2-">Part 2 !&lt;/h3></description></item><item><title>Article</title><link>http://example.org/notes/article/</link><pubDate>Sat, 23 Jul 2022 14:45:05 +0200</pubDate><guid>http://example.org/notes/article/</guid><description>&lt;!-- raw HTML omitted -->
+&lt;h3 id="part-2-">Part 2 !&lt;/h3></description></item><item><title>Article</title><link>https://aaron-randreth.github.io/notes/article/</link><pubDate>Sat, 23 Jul 2022 14:45:05 +0200</pubDate><guid>https://aaron-randreth.github.io/notes/article/</guid><description>&lt;!-- raw HTML omitted -->
 &lt;h2 id="hello-">Hello !&lt;/h2>
 &lt;h3 id="subheading">subheading&lt;/h3>
 &lt;p>This is a test text!
@@ -43,7 +43,7 @@ is available. It is also used to temporarily replace text in a process called
 greeking, which allows designers to consider the form of a webpage or
 publication, without the meaning of the text influencing the design.&lt;/p>
 &lt;h3 id="part-2-">Part 2 !&lt;/h3>
-&lt;p>&lt;img src="http://example.org/favicon.svg" alt="lol">&lt;/p></description></item><item><title>Article</title><link>http://example.org/revisions/article/</link><pubDate>Sat, 23 Jul 2022 14:45:05 +0200</pubDate><guid>http://example.org/revisions/article/</guid><description>&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://aaron-randreth.github.io/favicon.svg" alt="lol">&lt;/p></description></item><item><title>Article</title><link>https://aaron-randreth.github.io/revisions/article/</link><pubDate>Sat, 23 Jul 2022 14:45:05 +0200</pubDate><guid>https://aaron-randreth.github.io/revisions/article/</guid><description>&lt;!-- raw HTML omitted -->
 &lt;h2 id="hello-">Hello !&lt;/h2>
 &lt;h3 id="subheading">subheading&lt;/h3>
 &lt;p>This is a test text!
