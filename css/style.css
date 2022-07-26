@@ -82,20 +82,8 @@ a:hover {
 
 #top-arrow {
     position: fixed;
-    bottom: 1rem;
-    right: 1.5rem;
-    color: var(--primary-color);
-    font-size: 1.6rem;
-
-    text-decoration: none;
-    border: 0.2rem solid var(--primary-color);
-    border-radius: 100%;
-}
-
-#top-arrow:hover {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border-color: var(--primary-color);
+    bottom: 1em;
+    right: 1em;
 }
 
 .home {
