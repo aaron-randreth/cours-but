@@ -9,3 +9,4 @@ You'll find the classes here
 
 {{< taxolist title="Matières" type="tags" >}}
 
+Subscribe to this website with its rss feed {{< rsslink >}}

@@ -1,0 +1,8 @@
+{{ with .OutputFormats.Get "rss" -}}
+<a rel=" {{ .Rel }}" href="{{ .Permalink }}" class="rss">
+    <img src="/rss.svg" style="max-height:1.5em;"  
+        title="Subscribe to the rss feed of {{ $.Site.Title }}"
+        alt="[rss feed]"/>
+</a>
+{{ end -}}
+

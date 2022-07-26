@@ -1,6 +1,9 @@
 {{ partial "header.html" . -}}
 <header><h1 id="tag_{{ .Title }}">{{ .Title | title }}</h1></header>
 <article>
+
+<p> Subscribe to this page with its rss feed {{- partial "rsslink.html" . }}</p>
+
 {{ .Content -}}
 <ul>
 {{- range.Pages }}
