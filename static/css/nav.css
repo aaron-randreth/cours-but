@@ -15,7 +15,6 @@
 .nav-header {
     background-color: var(--highlight-color);
     text-align: center;
-    overflow: hidden;
 
     position: -webkit-sticky; /* Safari*/
     position: sticky;
