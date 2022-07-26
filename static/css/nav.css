@@ -4,9 +4,9 @@
 }
 
 .logo {
-    margin: 0;
-    padding: 1em;
-    font-size: 1.5em;
+    margin: 0.02em;
+    padding: 0;
+    font-size: 3.5em;
 
     height: calc(var(--bar-height)-1em);
     max-height: var(--bar-height);
