@@ -4,6 +4,11 @@
 	--tertiary-color:#181818;
 	--highlight-color: #D494FF; /*#5a002c;*/
 	--border-color: #2b2b2b;
+    --link-color: #0162c4;
+}
+
+html {
+	font-family: sans-serif ;
 }
 
 html, body {
@@ -12,7 +17,6 @@ html, body {
 }
 
 body {
-	font-style: sans-serif ;
 	background: var(--secondary-color);
 	color: var(--primary-color);
 }
@@ -33,6 +37,10 @@ header h1 {
 footer {
 	text-align: center ;
 	clear: both ;
+}
+
+a {
+    color: var(--link-color);
 }
 
 a:hover {
