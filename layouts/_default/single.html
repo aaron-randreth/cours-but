@@ -15,9 +15,12 @@
     {{ .TableOfContents }}
     {{ end }}
 
+    <p>
     {{ with .Params.author }}
-    <p>By {{ . }}</p>
+    By {{ . }}, on 
     {{ end }}
+    {{ .Date.Format "Jan 2th 2006" }}
+    </p>
 
     {{ if or $has_toc .Params.author }}
     <hr>
