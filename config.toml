@@ -4,8 +4,13 @@ title = 'Cours'
 theme = 'lugo'
 SectionPagesMenu = 'main'
 
-
 [params]
     favicon = 'favicon.svg'
     css = ["style.css", "nav.css", "footer.css"]
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 2
+    ordered = false
+    startLevel = 1
 
