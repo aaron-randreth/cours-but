@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language }}">
+
 <head>
-	<title>{{ if not .IsHome }}{{ .Title | title }} | {{ end }}{{ .Site.Title }}</title>
-	<link rel="canonical" href="{{ .Site.BaseURL }}">
-    
-    {{ with .OutputFormats.Get "rss" -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-    {{ end -}}
+  <title>{{ if not .IsHome }}{{ .Title | title }} | {{ end }}{{ .Site.Title }}</title>
+  <link rel="canonical" href="{{ .Site.BaseURL }}">
 
-    {{ range .Site.Params.css -}}
-    <link rel="stylesheet" type="text/css" href="/css/{{ . }}">
-    {{- end }}
+  {{ with .OutputFormats.Get "rss" -}}
+  {{ printf `
+  <link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
 
-	{{ with .Site.Params.favicon }}
-    <link rel="icon" href="/{{ . }}" type="image/svg+xml">
-	{{ end -}}
+  {{ range .Site.Params.css -}}
+  <link rel="stylesheet" type="text/css" href="/css/{{ . }}">
+  {{- end }}
 
-	<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
+  {{ with .Site.Params.favicon }}
+  <link rel="icon" href="/{{ . }}" type="image/svg+xml">
+  {{ end -}}
 
-	{{ if isset .Params "tags" }}<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", " }}{{ end }}">
-	{{ end -}}
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="robots" content="index, follow">
-	<meta charset="utf-8">
+  <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
+
+  {{ if isset .Params "tags" }}
+  <meta name="keywords" content="{{ with .Params.tags }}{{ delimit . " , " }}{{ end }}">
+  {{ end -}}
+  {{ if .Params.math }}{{ partial "helpers/katex.html" . }}{{ end }}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <meta charset="utf-8">
 </head>
+
 <body>
-{{ partial "nav.html" . }}
-<main class="main-content">
+  {{ partial "nav.html" . }}
+  <main class="main-content">
