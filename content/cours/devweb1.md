@@ -1,7 +1,7 @@
 ---
 title: "DevWeb: Introduction"
 date: 2022-09-02T09:43:48+02:00
-tags: ["Ressource R03.0 Devellopement Web"]
+tags: ["Ressource R03.0 Développement Web"]
 ---
 
 # Langages 
