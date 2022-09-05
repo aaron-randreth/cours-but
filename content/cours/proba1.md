@@ -1,5 +1,5 @@
 ---
-title: "Proba1"
+title: "Probalités: Introduction"
 date: 2022-08-29T10:09:02+02:00
 tags: ["Ressource R03.08 - Probalités"]
 math: true
