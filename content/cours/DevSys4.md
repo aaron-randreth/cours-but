@@ -85,3 +85,46 @@ pid_t Waitpid(pid_t pid, int* status, int options);
 ```
 
 Run `info pid` for more info.
+
+## Exec() 
+
+La famille d'appel `exec()`  de remplacer le processus appelant par un nouveau, 
+avec du nouveau code, de nouvelles données, et une nouvelle pile mais les mêmes
+variables, le même pid.
+
+Il ne **crée pas** de nouveau processus.
+
+```C
+#include <unistd.h>
+
+// Path to new code source
+int execl(const char* path, const char* args, ...);
+
+
+```
+
+**Rappel**: Chaque proc a dans sa table de fichiers ouverts, les 3 std (in, out, err).
+
+## Flock() 
+
+Verrouillage d'un fichier.
+
+for more advanced info `info ft`
+
+- porte sur un descripteur de fichier.
+- Verrouillage du fichier en entier
+- verou exclusif pour ceux qui écrivent
+- verrou partagé pour ceux qui lisent
+- verou consultatif (un proc n'est pas obligé de respecter l'indicateur de verrou)
+
+```C
+
+// info flock
+int flock(int fd, int operation); 
+
+```
+
+**Note**: `open` renvoie un `int` comme descripteur de fichiers, alors que `fopen` renvoie un `FILE*`.
+`open` nous permet d'utiliser `read` and `write`.
+
+`lockf` au un verrou obligatoir
