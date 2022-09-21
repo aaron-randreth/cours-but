@@ -109,7 +109,7 @@ int execl(const char* path, const char* args, ...);
 
 Verrouillage d'un fichier.
 
-for more advanced info `info ft`
+for more advanced info `info fcntl`
 
 - porte sur un descripteur de fichier.
 - Verrouillage du fichier en entier
