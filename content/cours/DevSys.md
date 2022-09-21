@@ -69,6 +69,11 @@ struct dirent { // Enregistrement qui permet de gérer un répertoire
 
 ### Ouverture et fermeture d'un répertoire 
 
+```C
+DIR* opendir(direname);
+closedir(DIR* dirp);
+```
+
 <!--- TODO: write down the functions and imports for this --->
 
 ### Lecture d'une entrée d'un répertoire 
