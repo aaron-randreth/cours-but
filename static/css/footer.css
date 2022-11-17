@@ -1,4 +1,13 @@
 .end-footer {
-    margin-top: 1em;
-    padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  min-height: 20vh;
+  border-top: 2px solid var(--border-color);
+}
+
+.end-footer * {
+  margin: 0;
+  /* outline: solid 2px red; */
 }
