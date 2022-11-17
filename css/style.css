@@ -1,10 +1,11 @@
 :root{
 	--primary-color: #DDDDDD;
 	--secondary-color: #181818;/*#131313;*/
-	--tertiary-color: #2b2b2b;/*#181818;*/
+	--tertiary-color: black;/*#181818;*/
 	--highlight-color: #D494FF; /*#5a002c;*/
 	--border-color: #2b2b2b;
-    --link-color: #0162c4;
+  --link-color: #0162c4;
+  --gradient: linear-gradient(0.25turn, darkblue, darkgreen);
 }
 
 html {
@@ -121,10 +122,10 @@ h1 {
     position: absolute;
     max-width: min(70%, 40em);
 
-    border: 5px solid var(--border-color);
+    border: 5px solid black;
     border-radius: 5px;
 
-    background-color: var(--tertiary-color);
+    background-color: black;
 }
 
 code {

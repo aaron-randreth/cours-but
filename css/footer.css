@@ -4,7 +4,9 @@
   justify-content: space-evenly;
 
   min-height: 20vh;
-  border-top: 2px solid var(--border-color);
+  border-top: 5px solid var(--border-color);
+
+  background-image: var(--gradient);
 }
 
 .end-footer * {
