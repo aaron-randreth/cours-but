@@ -19,16 +19,16 @@ Découverte du développement d&rsquo;applications multi-processus, traiter les 
 </span></span></span><span style=display:flex><span><span style=color:#75715e></span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>struct</span> dirent { <span style=color:#75715e>// Enregistrement qui permet de gérer un répertoire 
 </span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#75715e>// Charactérisation du fichier 
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    ino_t d_ino; <span style=color:#75715e>// numéro d&#39;inode
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>ino_t</span> d_ino; <span style=color:#75715e>// numéro d&#39;inode
 </span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>unsigned</span> <span style=color:#66d9ef>char</span> d_type; <span style=color:#75715e>//type du ficher
 </span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>char</span> d_name[<span style=color:#ae81ff>256</span>]<span style=color:#f92672>:</span> <span style=color:#75715e>// nom du fichier
 </span></span></span><span style=display:flex><span><span style=color:#75715e></span>
 </span></span><span style=display:flex><span>    <span style=color:#75715e>// Infos de contrôle 
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    off_t d_off; <span style=color:#75715e>// décalage jusqu&#39;à la diren suivent
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>off_t</span> d_off; <span style=color:#75715e>// décalage jusqu&#39;à la diren suivent
 </span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>unsigned</span> <span style=color:#66d9ef>short</span> d_reclen; <span style=color:#75715e>// longueur de cet enregistement 
 </span></span></span><span style=display:flex><span><span style=color:#75715e></span>  }
 </span></span></code></pre></div><h3 id=ouverture-et-fermeture-dun-répertoire>Ouverture et fermeture d&rsquo;un répertoire</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C data-lang=C><span style=display:flex><span>DIR<span style=color:#f92672>*</span> <span style=color:#a6e22e>opendir</span>(direname);
-</span></span><span style=display:flex><span>closedir(DIR<span style=color:#f92672>*</span> dirp);
+</span></span><span style=display:flex><span><span style=color:#a6e22e>closedir</span>(DIR<span style=color:#f92672>*</span> dirp);
 </span></span></code></pre></div><h3 id=lecture-dune-entrée-dun-répertoire>Lecture d&rsquo;une entrée d&rsquo;un répertoire</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C data-lang=C><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;sys/dirent.h&gt;</span><span style=color:#75715e>
 </span></span></span><span style=display:flex><span><span style=color:#75715e></span>
 </span></span><span style=display:flex><span><span style=color:#75715e>// Ne retourne pas d&#39;erreur, NULL à la fin de lecture 

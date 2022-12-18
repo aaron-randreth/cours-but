@@ -10,16 +10,16 @@ regularly un tableau de signaux)</p><p><strong>sockets</strong>: communication �
 un processus <em>fils</em>.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C data-lang=C><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;sys/types.h&gt;</span><span style=color:#75715e>
 </span></span></span><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;unistd.h&gt;</span><span style=color:#75715e>
 </span></span></span><span style=display:flex><span><span style=color:#75715e></span>
-</span></span><span style=display:flex><span>pid_t <span style=color:#a6e22e>fork</span>(<span style=color:#66d9ef>void</span>);
+</span></span><span style=display:flex><span><span style=color:#66d9ef>pid_t</span> <span style=color:#a6e22e>fork</span>(<span style=color:#66d9ef>void</span>);
 </span></span></code></pre></div><p>Cette fonction a deux valeurs de retour, elle retourne une valeur au fils et une
 valeur différente au père. Le père obtient le pid d fils, le fils obtient 0.
 Si l&rsquo;on obtient un -1, erreur de création du fils.</p><p>Comme le fork est une duplication, on doit vérifier avec cette valeur de retour
 si l&rsquo;onn est le père ou le fils, et agir en conséquence.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C data-lang=C><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e>// Son propre ID
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>getpid();
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>getpid</span>();
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e>// Le PID du père
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span>getppid();
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#a6e22e>getppid</span>();
 </span></span></code></pre></div><p>Comme chaque processus(sauf exception) a un seul père, on peut retrouver
 uniquement enregister le pid du fils dans celui du père et obtenir</p><p>Comme fork est une duplication père et fils partagent :</p><ul><li>le même code (text)</li><li>les mêmes descripteurs de fichiers ouverts</li><li>les mêmes variables, mais uniquement celles d&rsquo;environment et pas les locales</li></ul><p><strong>Side note</strong>: il n&rsquo;y a pas de variables d&rsquo;environment globales i.e si l&rsquo;on
 modifie/casse la valeur d&rsquo;une variables, les autres procs ne vont pas être
@@ -29,9 +29,9 @@ terminaison.</p><p>Wait provoque la suspension du processus appelant judq&rsquo;
 processus fils.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C data-lang=C><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;sys/types.h&gt;</span><span style=color:#75715e>
 </span></span></span><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;sys/wait.h&gt;</span><span style=color:#75715e>
 </span></span></span><span style=display:flex><span><span style=color:#75715e></span>
-</span></span><span style=display:flex><span>pid_t <span style=color:#a6e22e>wait</span>(<span style=color:#66d9ef>int</span><span style=color:#f92672>*</span> status_fils);
+</span></span><span style=display:flex><span><span style=color:#66d9ef>pid_t</span> <span style=color:#a6e22e>wait</span>(<span style=color:#66d9ef>int</span><span style=color:#f92672>*</span> status_fils);
 </span></span></code></pre></div><h2 id=waitpid>Waitpid()</h2><p>Attends qu&rsquo;un fils précis se termine.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C data-lang=C><span style=display:flex><span>
-</span></span><span style=display:flex><span>pid_t <span style=color:#a6e22e>Waitpid</span>(pid_t pid, <span style=color:#66d9ef>int</span><span style=color:#f92672>*</span> status, <span style=color:#66d9ef>int</span> options);
+</span></span><span style=display:flex><span><span style=color:#66d9ef>pid_t</span> <span style=color:#a6e22e>Waitpid</span>(<span style=color:#66d9ef>pid_t</span> pid, <span style=color:#66d9ef>int</span><span style=color:#f92672>*</span> status, <span style=color:#66d9ef>int</span> options);
 </span></span></code></pre></div><p>Run <code>info pid</code> for more info.</p><h2 id=exec>Exec()</h2><p>La famille d&rsquo;appel <code>exec()</code> de remplacer le processus appelant par un nouveau,
 avec du nouveau code, de nouvelles données, et une nouvelle pile mais les mêmes
 variables, le même pid.</p><p>Il ne <strong>crée pas</strong> de nouveau processus.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C data-lang=C><span style=display:flex><span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;unistd.h&gt;</span><span style=color:#75715e>
